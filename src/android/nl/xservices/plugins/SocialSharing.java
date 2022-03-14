@@ -715,6 +715,7 @@ public class SocialSharing extends CordovaPlugin {
             _callbackContext.sendPluginResult(new PluginResult(
                 PluginResult.Status.OK,
                 json));
+            ShareChooserPendingIntent.chosenComponent = null;
           } catch (JSONException e) {
             _callbackContext.error(e.getMessage());
           }
